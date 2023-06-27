@@ -1,5 +1,8 @@
-body {
-    height: 200vh;
+.title {
+    font-size: 40px;
+    font-weight: 600;
+    font-family: 'Noto Serif KR';
+    padding: 15px 0;
 }
 
 .header {
@@ -197,11 +200,12 @@ body {
 
 .main_visual .arrows .right {
     right: 15px;
-    color: #fff;
+
 }
 
 .main_visual:hover .arrows .right {
     transform: translate(-30px, 0);
+    color: #fff;
 }
 
 .main_visual .arrows i::before {
@@ -267,6 +271,125 @@ body {
 
 /* ----------------------------------------- */
 
+.main_content {
+    position: relative;
+    background: #f1f1f1;
+    padding: 40px 0;
+}
+
+.main_content .title {
+    margin: 30px 0;
+}
+
+.content_slide {
+    overflow: hidden;
+}
+
+.container img {
+    width: 360px;
+    height: 240px;
+}
+
+.content_slide h3 {
+    font-size: 30px;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    background: #1a3f57;
+    padding: 10px 10px;
+}
+
+
+ul.tabs {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    background: #1a3f57;
+    padding: 15px 0 0 0;
+}
+
+ul.tabs li {
+    background: #9aafbd9c;
+    color: #f3f3f3;
+    display: inline-block;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+/* 클릭안된 탭 */
+
+ul.tabs li.current {
+    background: #ddd;
+    color: #185880;
+    font-weight: 500;
+}
+
+/* 클릭된 탭 */
+
+.tab-content {
+    display: none;
+    background: #ddd;
+    padding: 15px;
+}
+
+.tab-content.current {
+    display: inherit;
+}
+
+/* --------------------------------------- */
+.main_content .arrows {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 999;
+    transform: translate(-50%, -50%);
+    max-width: 1440px;
+    width: 100%;
+
+}
+
+.main_content .arrows i {
+    position: absolute;
+    top: 25px;
+    cursor: pointer;
+    transition: .3s;
+    color: rgb(255, 255, 255, 0.5);
+}
+
+.main_content .arrows .left {
+    left: 5px;
+}
+
+.main_content:hover .arrows .left {
+    transform: translate(5px, 0);
+    color: #fff;
+}
+
+.main_content .arrows .right {
+    right: 5px;
+    color: #fff;
+}
+
+.main_content:hover .arrows .right {
+    transform: translate(-5px, 0);
+}
+
+.main_content .arrows i::before {
+    font-size: 40px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+}
+
+
+/* ----------------------------------------- */
+
+
+
 footer {
     background: #1a3f57;
     padding: 20px;
@@ -299,14 +422,3 @@ footer {
     color: #ddd;
     font-size: 12px;
 }
-
-/* :root {
-
-    #185880
-    --mc: #185880;
-    --sc: #B4613D;
-    --lc: #dddddd;
-    --wc: #ffffff;
-    --dc: #444444;
-    --gc: #f9f9f9;
-} */

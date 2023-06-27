@@ -7,17 +7,6 @@ $(function () {
             : $('.header').removeClass('on');
     });
 
-    $(window).on('scroll', function () {
-        let sct = $(window).scrollTop();
-        $('._se_').each(function () {
-            if (sct + $(window).innerHeight() > $(this).offset().top) {
-                $(this).addClass('on')
-            } else {
-                $(this).removeClass('on')
-            }
-        })
-    });
-
     const mainSlide = new Swiper('.main_slide', {
         loop: true,
         parallax: true,
@@ -37,34 +26,41 @@ $(function () {
     });
 
 
-    /*   $('.mobile_btn').on('click', function () {
-          $('.gnb').toggleClass('on');
-      }); */
+    $('.content_slide').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: false,
+    });
+    $('.event_slide').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: false,
+    });
 
-    $('.gnb .main_menu>li>a').on('click', function (e) {
-        if ($('.gnb').hasClass('on')) {
-            e.preventDefault();
-            $(this)
-                .next()
-                .stop()
-                .slideToggle();
-            $(this)
-                .parent()
-                .siblings()
-                .find('.sub')
-                .stop()
-                .slideUp();
-        }
+    $(document).ready(function () {
+
+        $('ul.tabs li').click(function () {
+            var tab_id = $(this).attr('data-tab');
+
+            $('ul.tabs li').removeClass('current');
+            $('.tab-content').removeClass('current');
+
+            $(this).addClass('current');
+            $("#" + tab_id).addClass('current');
+        })
     });
 
 
-    $(window).on('resize', function () {
-        $('.gnb').removeClass('on')
+
+    $('.main_content .arrows .left').on('click', function () {
+        $('.content_slide , .event_slide').slick('slickPrev')
+    });
+    $('.main_content .arrows .right').on('click', function () {
+        $('.content_slide , .event_slide').slick('slickNext')
     });
 
-    $('.gnb').on('wheel', function (e) {
-        if ($('.gnb').hasClass('on')) {
-            e.preventDefault();
-        }
-    });
+
+
 })

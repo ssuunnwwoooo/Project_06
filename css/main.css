@@ -1,3 +1,14 @@
+.round_btn {
+    display: inline-flex;
+    justify-content: center;
+    color: #000;
+    font-size: 15px;
+    padding: 25px 20px;
+    background: #fff;
+    border-radius: 100px;
+    box-shadow: 0px 0px 20px #b5b5b5;
+}
+
 .title {
     font-size: 40px;
     font-weight: 600;
@@ -457,71 +468,189 @@
 
 .main_content {
     position: relative;
-    padding: 50px 0 100px 0;
+    padding: 100px 0;
 }
 
 .main_content .title {
     position: relative;
-    justify-content: space-between;
-    margin: 30px 0;
+    text-align: center;
+
+    opacity: 0;
+    transform: translate(0, 100px);
+    transition: 0.5s;
+
+    color: #222;
 }
 
-.main_content .title::before {
-    position: absolute;
-    content: "";
-    bottom: -10px;
-    left: 0;
-    background: #52796f;
-    height: 2px;
-    width: 37%;
+.main_content.on .title {
+    opacity: 1;
+    transform: translate(0, 0);
 }
 
-.content_wrap {}
-
-.content_slide {
-    padding: 80px 0;
-    gap: 30px;
+.main_content .btn {
+    text-align: center;
+    width: 250px;
     margin: 0 auto;
-    max-width: 1200px;
 }
 
-.content_slide figure {
-    border: 1px solid #ddd;
-    padding: 50px 5px 80px 5px;
-    margin: 0 15px 0 0;
+.main_content .btn:hover {
+    animation: headShake 1s infinite;
 }
 
-.content_slide img {
-    border: 1px solid #b3b3b3;
-}
-
-.content_slide h3 {
-    margin: 80px 0 25px 0;
+.main_content .btn i {
     font-size: 20px;
-    font-weight: 500;
-}
-
-.content_slide p {
-    color: #444;
+    margin: -3px 0 0 5px;
 }
 
 /* --------------------------------------- */
 .main_content .arrows {
     position: absolute;
-    bottom: 0;
-    right: 0;
+    top: 50%;
+    left: 50%;
+    z-index: 999;
     transform: translate(-50%, -50%);
-
+    max-width: 750px;
+    width: 100%;
 }
 
 .main_content .arrows i {
-    font-size: 30px;
+    position: absolute;
+    top: 0;
     cursor: pointer;
-    color: #252525;
+    transition: .3s;
+    color: #444;
+}
+
+.main_content .arrows .left {
+    left: 15px;
 }
 
 
+.main_content .arrows .right {
+    right: 15px;
+}
+
+
+.main_content .arrows i::before {
+    font-size: 40px;
+    padding: 15px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px #717171;
+    transition: 0.2s;
+}
+
+.main_content .arrows i:hover::before {
+    background: #52796f;
+    color: #fff;
+}
+
+/* ------------------------------------------- */
+.content_wrap {}
+
+.main_content .content_slide {
+    position: relative;
+    padding: 80px 0;
+}
+
+
+
+.content_slide figure {
+    position: relative;
+    margin: 0 15px 0 15px;
+}
+
+.content_slide figure::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 0 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+    cursor: pointer;
+}
+
+.content_slide figure img {
+    height: 500px;
+    width: 700px;
+    object-fit: cover;
+    border: 1px solid #ddd;
+}
+
+.content_slide figure .txt {
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    margin: 10px 10px;
+}
+
+
+.content_slide h3 {
+    margin: 0 0 15px 0;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+
+
 /* ----------------------------------------- */
+
+.main_event {
+    padding: 80px 0;
+    background: #f0f0f0;
+}
+
+.main_event .title {
+    text-align: center;
+    margin: 0 0 80px 0;
+}
+
+.event_img {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.event_img figure {
+    flex: 1 0 50%;
+    border: 1px solid blue;
+}
+
+.event_img figure img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+}
+
+.event_img .txt {
+    margin: 50px 0;
+}
+
+.event_img .txt strong {
+    position: relative;
+    display: inline-flex;
+    font-size: 18px;
+    font-weight: 500;
+    color: #354f52;
+    margin: 0 0 30px 0;
+}
+
+.event_img .txt strong::before {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #444;
+}
+
+.event_img .txt p {
+    font-size: 15px;
+    border: 1px solid red;
+}
+
+/* ----------------------------------------- */
+
+
 
 
 footer {

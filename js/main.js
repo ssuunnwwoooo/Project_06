@@ -39,23 +39,14 @@ $(function () {
     });
 
     $('.content_slide').slick({
-        infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        arrows: false,
-        setPosition: 0,
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: false,
-        },
 
-    });
-    $('.event_slide').slick({
-        infinite: true,
         slidesToShow: 3,
         slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 2000,
         arrows: false,
-        setPosition: 0,
+
+
     });
 
 
@@ -65,7 +56,6 @@ $(function () {
     $('.main_content .arrows .right').on('click', function () {
         $('.content_slide').slick('slickNext')
     });
-
 
 
 

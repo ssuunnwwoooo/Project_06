@@ -289,54 +289,46 @@
 
 
 /* ----------------------------------------- */
+.map .img_box img {
+    border-radius: 50px;
+    width: 600px;
+}
+
+.main_map {}
 
 .main_map .map {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 50px;
-    padding: 100px 60px;
+    display: flex;
+    align-items: flex-start;
+    gap: 100px;
+
+    padding: 150px 0 90px 0;
 }
 
-.main_map .map .img_box img {
-    border-radius: 50px;
+.main_map .map .top {
+    opacity: 0;
+    transform: translate(0, 100px);
+    transition: 0.4s;
 }
 
-.main_map .map .left_img {
-    position: relative;
+.main_map.on .map .top {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.main_map .map .top_img {
     filter: brightness(88%);
     opacity: 0;
     transform: translate(0, 100px);
-    transition: 0.3s;
+    transition: 0.8s;
 }
 
-.main_map .map .left_img::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: -150px;
-    width: 200px;
-    height: 200px;
-    outline: 50px solid #52796f;
-    border-radius: 50%;
-}
 
-.main_map.on .map .left_img {
+.main_map.on .map .top_img {
     opacity: 1;
     transform: translate(0, 0);
 }
 
-.main_map .map .left {
-    opacity: 0;
-    transform: translate(0, 100px);
-    transition: 0.5s;
 
-    margin: 200px 0 60px 0;
-}
-
-.main_map.on .map .left {
-    opacity: 1;
-    transform: translate(0, 0);
-}
 
 .main_map .map h3 {
     font-size: 24px;
@@ -352,21 +344,41 @@
     margin: 0 0 50px 0;
 }
 
-.main_map .map .right {
-    opacity: 0;
-    transform: translate(0, 100px);
-    transition: 0.5s;
+/* ----------------------------------- */
+.main_map02 {}
 
-    margin: 200px 0 0 0;
-
+.main_map02 .map {
+    display: flex;
+    gap: 100px;
+    padding: 0 0 150px 0;
 }
 
-.main_map.on .map .right {
+.main_map02 .map .bottom_img {
+    filter: brightness(88%);
+    opacity: 0;
+    transform: translate(0, 100px);
+    transition: 0.8s;
+}
+
+.main_map02.on .map .bottom_img {
     opacity: 1;
     transform: translate(0, 0);
 }
 
-.main_map .map .right .desc {
+
+.main_map02 .map .bottom {
+    opacity: 0;
+    transform: translate(0, 100px);
+    transition: 0.3s;
+
+}
+
+.main_map02.on .map .bottom {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.main_map02 .map .bottom .desc {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -375,45 +387,33 @@
     border-bottom: 1px dashed #ddd;
 }
 
-.main_map .map .right .desc i {
+.main_map02 .map .bottom .desc i {
     background: #444;
     padding: 15px 16px;
     border-radius: 50%;
     font-size: 30px;
 }
 
-.main_map .map .right .desc .tel {
+.main_map02 .map .bottom .desc .tel {
     font-size: 40px;
     font-weight: 700;
 }
 
-.main_map .map .list>* {
+.main_map02 .map .list>* {
     display: grid;
     grid-template-columns: 100px 1fr;
     margin: 0 0 20px 0;
     line-height: 1.6px;
 }
 
-.main_map .map .list .ls2 {
+.main_map02 .map .list .ls2 {
     letter-spacing: 30px;
 }
 
-.main_map .map .list>*::before {
+.main_map02 .map .list>*::before {
     top: 10px;
 }
 
-.main_map .map .right_img {
-
-    filter: brightness(88%);
-    opacity: 0;
-    transform: translate(0, 100px);
-    transition: 0.8s;
-}
-
-.main_map.on .map .right_img {
-    opacity: 1;
-    transform: translate(0, 0);
-}
 
 
 /* ----------------------------------------- */
@@ -457,135 +457,68 @@
 
 .main_content {
     position: relative;
-    background: #cad2c5;
-    padding: 50px 0 30px 0;
-    min-width: 0;
+    padding: 50px 0 100px 0;
 }
 
-/* .main_content::before {
-    content: "";
-    position: absolute;
-    top: 100px;
-    left: 250px;
-    width: 150px;
-    height: 150px;
-    border: 50px solid #52796f;
-}
- */
 .main_content .title {
+    position: relative;
+    justify-content: space-between;
     margin: 30px 0;
 }
 
+.main_content .title::before {
+    position: absolute;
+    content: "";
+    bottom: -10px;
+    left: 0;
+    background: #52796f;
+    height: 2px;
+    width: 37%;
+}
+
+.content_wrap {}
+
 .content_slide {
-    overflow: hidden;
-}
-
-.container {
-    max-width: 1440px;
+    padding: 80px 0;
+    gap: 30px;
     margin: 0 auto;
-    background: #1a3f57;
-    padding: 10px 10px;
+    max-width: 1200px;
 }
 
-
-.container img {
-    width: 360px;
-    height: 240px;
-    object-fit: cover;
+.content_slide figure {
+    border: 1px solid #ddd;
+    padding: 50px 5px 80px 5px;
+    margin: 0 15px 0 0;
 }
 
-.container h3 {
-    font-size: 30px;
-    font-weight: 500;
-    margin: 10px 0;
+.content_slide img {
+    border: 1px solid #b3b3b3;
 }
 
-
-
-ul.tabs {
-    margin: 0px;
-    padding: 0px;
-    list-style: none;
-    background: #1a3f57;
-    padding: 15px 0 0 0;
-}
-
-ul.tabs li {
-    background: #9aafbd9c;
-    color: #f3f3f3;
-    display: inline-block;
-    padding: 10px 15px;
-    cursor: pointer;
-
-    margin: 0 10px 0 0;
-
-}
-
-/* 클릭안된 탭 */
-
-ul.tabs li.current {
-    background: #ddd;
-    color: #52796f;
+.content_slide h3 {
+    margin: 80px 0 25px 0;
+    font-size: 20px;
     font-weight: 500;
 }
 
-/* 클릭된 탭 */
-
-.tab-content {
-    display: none;
-    background: #ddd;
-    padding: 15px;
-}
-
-.tab-content.current {
-    display: inherit;
+.content_slide p {
+    color: #444;
 }
 
 /* --------------------------------------- */
 .main_content .arrows {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 999;
+    bottom: 0;
+    right: 0;
     transform: translate(-50%, -50%);
-    max-width: 1440px;
-    width: 100%;
 
 }
 
 .main_content .arrows i {
-    position: absolute;
-    top: 25px;
+    font-size: 30px;
     cursor: pointer;
-    transition: .3s;
-    color: rgb(255, 255, 255, 0.5);
+    color: #252525;
 }
-
-.main_content .arrows .left {
-    left: 5px;
-}
-
-.main_content:hover .arrows .left {
-    transform: translate(5px, 0);
-    color: #fff;
-}
-
-.main_content .arrows .right {
-    right: 5px;
-    color: #fff;
-}
-
-.main_content:hover .arrows .right {
-    transform: translate(-5px, 0);
-}
-
-.main_content .arrows i::before {
-    font-size: 40px;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 50%;
-}
-
 
 
 /* ----------------------------------------- */

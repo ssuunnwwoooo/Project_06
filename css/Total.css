@@ -1,0 +1,96 @@
+.top_banner {
+    position: relative;
+    background: url(../images/sub3.jpg)no-repeat center center/cover;
+    height: 50vh;
+    margin: 0 0 80px 0;
+}
+
+.top_banner .img_box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    transform: translate(270%, 90%);
+}
+
+.total_banner {}
+
+.total_banner .menu {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.total_banner .menu li {
+    font-size: 20px;
+    font-weight: 300;
+    margin: 0 20px;
+}
+
+.total_banner .menu li:hover {
+    color: #52796f;
+    font-weight: 500;
+}
+
+.mainNews h2 {
+    font-size: 25px;
+    margin: 0 0 20px 0;
+}
+
+.mainNews .main_list li {
+    position: relative;
+    margin: 0 0 10px 0;
+}
+
+.mainNews .main_list li::before {
+    position: absolute;
+    content: "";
+    top: 30%;
+    left: 0%;
+    width: 11px;
+    height: 12px;
+    background: url(../images/icon_hot.gif);
+}
+
+.mainNews .main_list a {
+    position: relative;
+    z-index: 999;
+    display: block;
+    padding: 40px 50px;
+}
+
+.mainNews .main_list strong {
+    display: block;
+    margin: 0 0 20px 0;
+
+    font-size: 22px;
+    font-weight: 300;
+    color: #111;
+}
+
+.mainNews .main_list strong:hover {
+    color: #52796f;
+    font-weight: 500;
+}
+
+.mainNews .main_list .new {
+    font-weight: 500;
+}
+
+.mainNews .main_list span {
+    font-size: 14px;
+}
+
+.mainNews .cate {
+    position: absolute;
+    top: 50%;
+    right: 50px;
+    transform: translate(0, -50%);
+
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.mainNews .cate i {
+    margin: 0 0 0 30px;
+}

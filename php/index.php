@@ -1,68 +1,6 @@
-<!DOCTYPE html>
-<html lang="ko">
+<? include 'header.php'; ?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>선녀와 나무꾼</title>
-    <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/animate.min.css">
-    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="./css/slick.css">
-    <link rel="stylesheet" href="./css/main.css">
-
-    <script src="./js/jquery-1.12.4.min.js"></script>
-    <script src="./js/swiper-bundle.min.js"></script>
-    <script src="./js/slick.min.js"></script>
-    <script src="./js/main.js"></script>
-</head>
-
-<body>
-
-    <header class="header">
-        <div class="header_wrap inner">
-            <h1 class="logo">
-                <a href=""><img src="./images/gnb_title.png" alt="선녀와 남욱군"></a>
-            </h1>
-
-            <nav class="gnb">
-                <ul class="main_menu">
-                    <li><a href="/">선녀와 나무꾼</a>
-                        <ul class="sub">
-                            <li><a href="/">인사말</a></li>
-                            <li><a href="/">찾아오시는길</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="/">테마전시안내</a></li>
-                    <li><a href="/">체험안내</a></li>
-                    <li><a href="/">이용안내</a>
-                        <ul class="sub">
-                            <li><a href="/">관람 및 요금안내</a></li>
-                            <li><a href="/">편의시설</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="/">커뮤니티</a>
-                        <ul class="sub">
-                            <li><a href="./Total.html">공지사항 &amp; 이벤트</a></li>
-                            <li><a href="/">질문과 답변</a></li>
-                            <li><a href="/">포토갤러리</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="/">관광지할인쿠폰</a></li>
-                </ul>
-            </nav>
-
-            <div class="open_time">
-                <p><i class="xi-time"></i> 관람시간</p>
-                <span>09:00 ~ 18:30</span></p>
-            </div>
-        </div>
-    </header>
-
-    <!-- 헤더 끝 -->
-
-    <main>
+<main>
         <section class="main_visual">
             <div class="main_slide swiper">
                 <div class="swiper-wrapper">
@@ -101,7 +39,9 @@
                 </a>
             </div>
 
-
+            <div class="scroll">
+                <span>scroll</span>
+            </div>
         </section>
 
         <!-- 메인비주얼 끝 -->
@@ -350,15 +290,4 @@
 
     </main>
 
-    <footer class="footer">
-        <ul>
-            <li>제주특별자치도 제주시 조천읍 선흘리 1997</li>
-            <li><a href="">TEL. 064-784-9001</a></li>
-            <li><a href="">FAX. 064-784-9004</a></li>
-            <li>사업자등록번호 301-46-01574</li>
-        </ul>
-        <div class="copyright">&copy;Copyright 2017. 선녀와나무꾼 All Rights Reserved.</div>
-    </footer>
-</body>
-
-</html>
+    <? include 'footer.php'; ?>

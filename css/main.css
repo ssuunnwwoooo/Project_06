@@ -286,7 +286,7 @@
 .main_visual .btn_cicle .case {
     display: flex;
     flex-direction: column;
-    /*  */
+  
     align-items: center;
 
     color: #fff;
@@ -311,9 +311,9 @@
     display: block;
     width: 26px;
     height: 30px;
-    margin: 0 0 10px 0;
+    margin: 5px 0;
     font-family: bootstrap-icons;
-    font-size: 30px;
+    font-size: 28px;
 }
 
 .main_visual .btn_cicle p {
@@ -537,6 +537,8 @@
     position: relative;
     text-transform: uppercase;
     margin: 0 10px 0 0;
+
+    text-shadow: 2px 2px 4px rgb(58, 58, 58);
 }
 
 .main_banner .title h2 {
@@ -547,6 +549,7 @@
     margin: 0 0 30px 0;
     font-weight: 300;
     line-height: 30px;
+    
 }
 
 /* ----------------------------------------- */
@@ -635,8 +638,6 @@
     padding: 80px 0;
 }
 
-
-
 .content_slide figure {
     position: relative;
     margin: 0 15px 0 15px;
@@ -661,7 +662,7 @@
     position: absolute;
     bottom: 0;
     color: #fff;
-    margin: 10px 10px;
+    margin: 25px 25px;
 }
 
 
@@ -709,17 +710,14 @@
 
 .event_img {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    padding: 0 100px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+   gap: 30px;
 }
 
 
 .event_img figure {
     position: relative;
     background: #fff;
-    width: 450px;
-    height: 100%;
     margin: 0 auto;
     box-shadow: 0px 0px 20px #d8d8d8;
 }
@@ -788,7 +786,7 @@
 }
 
 .event_img .txt {
-    margin: 30px 5px;
+    margin: 30px 20px;
 }
 
 .event_img .txt strong {
@@ -817,15 +815,13 @@
 }
 
 
-
 /* ----------------------------------------- */
-
 
 
 
 .footer {
     background: #324649;
-    padding: 50px 0;
+    padding: 60px 0;
 }
 
 .ft_wrap {
@@ -833,14 +829,12 @@
 }
 
 .footer .ft_img {
-    width: 200px;
-
+    width: 180px;
     filter: brightness(80%);
-
 }
 
 .footer .ft_txt {
-    margin: 0 10px;
+    margin: 0 0 0 25px;
 }
 
 .footer .ft_txt strong {
@@ -850,7 +844,6 @@
 }
 
 .footer .basic {
-    padding: 10px 0 10px 0;
 }
 
 .footer ul {
@@ -876,8 +869,7 @@
 }
 
 .footer .copyright {
-    /*   margin: 20px 0 0 0; */
-    color: #b3b3b3;
+    color: #a7a7a7;
     font-size: 12px;
 }
 

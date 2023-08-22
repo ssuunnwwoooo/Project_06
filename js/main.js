@@ -31,6 +31,8 @@ $(function () {
         slideActiveClass: 'on',
     });
 
+
+
     $('.main_visual .arrows .left').on('click', function () {
         mainSlide.slidePrev();
     });
@@ -58,5 +60,25 @@ $(function () {
     });
 
 
+    $('.mobile_btn').on('click', function () {
+        $('.gnb').toggleClass('on');
+    });
 
+
+    $('.gnb .main_menu>li>a').on('click', function (e) {
+        if ($('.gnb').hasClass('on')) {
+            e.preventDefault();
+            $(this)
+                .next()
+                .stop()
+                .slideToggle();
+            $(this)
+                .parent()
+                .siblings()
+                .find('.sub_menu')
+                .stop()
+                .slideUp();
+        }
+    });
 })
+

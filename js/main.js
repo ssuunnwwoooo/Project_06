@@ -40,15 +40,22 @@ $(function () {
         mainSlide.slideNext();
     });
 
-    $('.content_slide').slick({
 
+    $('.content_slide').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 2000,
         arrows: false,
 
-
+        responsive: [
+            {
+                breakpoint: 800,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
     });
 
 
@@ -61,12 +68,13 @@ $(function () {
 
 
     $('.mobile_btn').on('click', function () {
+        $('.main_menu').toggleClass('on');
         $('.gnb').toggleClass('on');
+        $('.mobile_btn').toggleClass('on');
     });
 
-
     $('.gnb .main_menu>li>a').on('click', function (e) {
-        if ($('.gnb').hasClass('on')) {
+        if ($('.main_menu').hasClass('on')) {
             e.preventDefault();
             $(this)
                 .next()

@@ -344,7 +344,7 @@
     align-items: flex-start;
     gap: 100px;
 
-    padding: 150px 0 90px 0;
+    padding: 150px 15px 90px 15px;
 }
 
 .main_map .map .top {
@@ -400,7 +400,7 @@
 .main_map02 .map {
     display: flex;
     gap: 100px;
-    padding: 50px 0 150px 0;
+    padding: 50px 15px 150px 15px;
 }
 
 .main_map02 .map .bottom_img {
@@ -821,11 +821,12 @@
 
 .footer {
     background: #324649;
-    padding: 60px 0;
+    padding: 60px 15px;
 }
 
 .ft_wrap {
     display: flex;
+    justify-content: space-between;
 }
 
 .footer .ft_img {
